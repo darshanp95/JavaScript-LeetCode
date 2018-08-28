@@ -1,0 +1,61 @@
+/**
+ * @param {number} x
+ * @return {number}
+ */
+
+var upperBound = 2147483647
+
+var lowerBound = -2147483648
+
+var reverse = function(x) {
+    
+   if (x >= 0) {
+  var a = x.toString()
+  console.log(a)
+  var b = a.split("")
+  console.log(b)
+  var c = b.reverse()
+  console.log(c)
+  var d = c.join("")
+
+  console.log(d)
+  
+
+  var result = Number(d)
+  
+  if (result > upperBound) {
+      return 0
+  } else {
+      
+     return result
+      } 
+       
+   } else if (x < 0 && x >= lowerBound) {
+
+    var initialStep = x * -1
+
+    var a = initialStep.toString()
+    var b = a.split("")
+    var c = b.reverse()
+    var d = c.join("")
+
+    var e = Number(d)
+
+    var negResult = e * -1
+    
+    if(negResult < lowerBound) {
+        return 0
+    } else {
+
+    return negResult
+    }
+
+
+
+
+
+  } else {
+    return "not a number"
+  }
+    
+};
